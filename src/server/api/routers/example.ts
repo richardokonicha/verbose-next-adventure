@@ -10,4 +10,10 @@ export const exampleRouter = createTRPCRouter({
         greeting: `Hello ${input.text}`,
       };
     }),
+
+  hellou: publicProcedure.query(({ ctx }) => {
+    return {
+      greeting: `hello! ${ctx.auth?.userId}`
+    }
+  })
 });
