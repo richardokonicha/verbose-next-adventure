@@ -1,7 +1,7 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import { useAuth, useUser } from '@clerk/nextjs';
+import { useUser } from '@clerk/nextjs';
 import {
   SignOutButton,
   UserButton

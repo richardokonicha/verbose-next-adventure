@@ -17,7 +17,7 @@
 import { type CreateNextContextOptions } from "@trpc/server/adapters/next";
 import type { SignedInAuthObject, SignedOutAuthObject } from "@clerk/nextjs/dist/api";
 
-import * as trpc from '@trpc/server'
+import type { inferAsyncReturnType } from '@trpc/server'
 // import * as trpcNext from '@trpc/server/adapters/next'
 import { getAuth } from '@clerk/nextjs/server'
 
@@ -71,7 +71,7 @@ export const createTRPCContext = (_opts: CreateNextContextOptions) => {
 //   return await createContextInner({ auth: getAuth(opts.req) })
 // }
 
-export type Context = trpc.inferAsyncReturnType<typeof createTRPCContext>
+export type Context = inferAsyncReturnType<typeof createTRPCContext>
 
 /**
  * 2. INITIALIZATION
