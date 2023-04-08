@@ -3,10 +3,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { useAuth, useUser } from '@clerk/nextjs';
 import {
-  ClerkProvider,
-  SignedIn,
-  SignedOut,
-  SignInButton,
   SignOutButton,
   UserButton
 } from "@clerk/nextjs";
@@ -17,7 +13,7 @@ import { api } from "~/utils/api";
 
 const Home: NextPage = () => {
 
-  const { getToken, userId, sessionId } = useAuth();
+  // const { getToken, userId, sessionId } = useAuth();
   const { isLoaded, isSignedIn, user } = useUser()
   
   if (!isLoaded || !isSignedIn) {

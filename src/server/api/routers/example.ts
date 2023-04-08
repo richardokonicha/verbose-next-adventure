@@ -13,7 +13,7 @@ export const exampleRouter = createTRPCRouter({
 
   hellou: publicProcedure.query(({ ctx }) => {
     return {
-      greeting: `hello! ${ctx.auth?.userId}`
+      greeting: `hello! ${ ctx.auth ? ctx.auth?.userId : 'unknown' }`
     }
   })
 });

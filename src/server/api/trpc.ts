@@ -19,11 +19,11 @@ import type { SignedInAuthObject, SignedOutAuthObject } from "@clerk/nextjs/dist
 
 import * as trpc from '@trpc/server'
 // import * as trpcNext from '@trpc/server/adapters/next'
-import { getAuth, clerkClient } from '@clerk/nextjs/server'
+import { getAuth } from '@clerk/nextjs/server'
 
 
 /** Replace this with an object if you want to pass things to `createContextInner`. */
-type CreateContextOptions = Record<string, never>;
+// type CreateContextOptions = Record<string, never>;
 
 /**
  * This helper generates the "internals" for a tRPC context. If you need to use it, you can export

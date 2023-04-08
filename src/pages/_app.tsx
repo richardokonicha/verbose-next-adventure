@@ -5,7 +5,7 @@ import {
   ClerkProvider,
   SignedIn,
   SignedOut,
-  RedirectToSignIn,
+  // RedirectToSignIn,
   SignIn
 } from "@clerk/nextjs";
 import { useRouter } from "next/router";
