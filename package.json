@@ -1,12 +1,14 @@
 {
-  "name": "my-t3-app",
+  "name": "verbose-flush",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "postinstall": "prisma generate",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@clerk/nextjs": "^4.15.0",
@@ -14,11 +16,15 @@
     "@tanstack/react-query": "^4.28.0",
     "@trpc/client": "^10.18.0",
     "@trpc/next": "^10.18.0",
-    "@trpc/react-query": "^10.18.0",
+    "@trpc/react-query": "^10.19.1",
     "@trpc/server": "^10.18.0",
+    "@upstash/ratelimit": "^0.4.0",
+    "@upstash/redis": "^1.20.1",
+    "dayjs": "^1.11.7",
     "next": "^13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hot-toast": "^2.4.0",
     "superjson": "1.12.2",
     "zod": "^3.21.4"
   },
